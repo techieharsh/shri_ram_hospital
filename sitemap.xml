@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  
+  <!-- Home Page -->
+  <url>
+    <loc>https://shriramhospitalaonla.in/</loc>
+    <lastmod>2026-11-21</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://shriramhospitalaonla.in/assets/images/real/dsc_3484.jpg</image:loc>
+      <image:title>Shri Ram Hospital Aonla Bareilly Campus</image:title>
+      <image:caption>Hospital Building and Entrance Facade in Aonla</image:caption>
+    </image:image>
+  </url>
+
+  <!-- About Us -->
+  <url>
+    <loc>https://shriramhospitalaonla.in/about.html</loc>
+    <lastmod>2026-11-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://shriramhospitalaonla.in/assets/images/real/dsc_3498.jpg</image:loc>
+      <image:title>Shri Ram Hospital Reception and Waiting Lobby</image:title>
+    </image:image>
+  </url>
+
+  <!-- Doctor Profile (Dr. Hardeep Singh) -->
+  <url>
+    <loc>https://shriramhospitalaonla.in/doctors.html</loc>
+    <lastmod>2026-11-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://shriramhospitalaonla.in/assets/images/dr-hardeep-singh.jpg</image:loc>
+      <image:title>Dr. Hardeep Singh - General Physician and Paediatrics</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://shriramhospitalaonla.in/assets/images/real/dsc_3502.jpg</image:loc>
+      <image:title>Dr. Hardeep Singh Consultation Chamber</image:title>
+    </image:image>
+  </url>
+
+  <!-- Clinical Treatments & Services -->
+  <url>
+    <loc>https://shriramhospitalaonla.in/services.html</loc>
+    <lastmod>2026-11-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Hospital Facilities & Infrastructure -->
+  <url>
+    <loc>https://shriramhospitalaonla.in/facilities.html</loc>
+    <lastmod>2026-11-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://shriramhospitalaonla.in/assets/images/real/dsc_3513.jpg</image:loc>
+      <image:title>Day Care Observation Ward Patient Beds</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://shriramhospitalaonla.in/assets/images/real/dsc_3530.jpg</image:loc>
+      <image:title>24/7 In-House Medical Pharmacy Counter</image:title>
+    </image:image>
+  </url>
+
+  <!-- Real Photo Gallery (19 Photos) -->
+  <url>
+    <loc>https://shriramhospitalaonla.in/gallery.html</loc>
+    <lastmod>2026-11-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://shriramhospitalaonla.in/assets/images/real/dsc_3484.jpg</image:loc>
+      <image:title>Shri Ram Hospital Building Front Entrance</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://shriramhospitalaonla.in/assets/images/real/dsc_3502.jpg</image:loc>
+      <image:title>Doctor Consultation Chamber</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://shriramhospitalaonla.in/assets/images/real/dsc_3513.jpg</image:loc>
+      <image:title>Day Care Patient Ward</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://shriramhospitalaonla.in/assets/images/real/dsc_3530.jpg</image:loc>
+      <image:title>Hospital Medical Pharmacy</image:title>
+    </image:image>
+  </url>
+
+  <!-- Online Appointment Booking -->
+  <url>
+    <loc>https://shriramhospitalaonla.in/appointment.html</loc>
+    <lastmod>2026-11-21</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Contact & Directions -->
+  <url>
+    <loc>https://shriramhospitalaonla.in/contact.html</loc>
+    <lastmod>2026-11-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+</urlset>

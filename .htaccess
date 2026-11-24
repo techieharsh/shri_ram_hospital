@@ -1,0 +1,18 @@
+# Shri Ram Hospital - Apache Configuration
+DirectoryIndex index.php index.html
+
+# Prevent Directory Browsing
+Options -Indexes
+
+# UTF-8 Encoding
+AddDefaultCharset UTF-8
+
+# Clean rewrite rules (optional, handles both .php and friendly URLs)
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /shri_ram_hospital_website/
+    
+    # Redirect .html to .php
+    RewriteCond %{THE_REQUEST} \s/+(.+?)\.html[\s?] [NC]
+    RewriteRule ^ /shri_ram_hospital_website/%1.php [R=301,L]
+</IfModule>

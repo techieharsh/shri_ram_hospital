@@ -1,0 +1,25 @@
+# Robots.txt for Shri Ram Hospital – Aonla, Bareilly
+# Official Website: https://shriramhospitalaonla.in/
+
+User-agent: *
+Allow: /
+Allow: /index.html
+Allow: /about.html
+Allow: /doctors.html
+Allow: /services.html
+Allow: /facilities.html
+Allow: /gallery.html
+Allow: /appointment.html
+Allow: /contact.html
+Allow: /assets/css/
+Allow: /assets/js/
+Allow: /assets/images/
+
+# Disallow internal admin & reception operational endpoints
+Disallow: /admin.html
+Disallow: /admin.php
+Disallow: /api/
+Disallow: /data/
+
+# Sitemap Location
+Sitemap: https://shriramhospitalaonla.in/sitemap.xml
