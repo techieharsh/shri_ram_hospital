@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: shri-ram-hospital
+    env: docker
+    plan: free
+    region: singapore
+    dockerfilePath: ./Dockerfile

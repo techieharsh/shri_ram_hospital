@@ -115,7 +115,7 @@ include 'header.php';
                     <span>Mobile Number (मोबाइल नंबर)</span>
                     <span class="req">*</span>
                   </label>
-                  <input type="tel" id="patientPhone" class="form-control" placeholder="e.g. 78273XXXXX" pattern="[0-9]{10}" maxlength="10" required>
+                  <input type="tel" id="patientPhone" class="form-control" placeholder="e.g. 9876543210" pattern="(\+91|0)?[0-9]{10}" maxlength="14" required>
                 </div>
               </div>
 
@@ -278,78 +278,6 @@ include 'header.php';
       </div>
     </div>
   </section>
-
-  <!-- ===================================================================
-       6. APPOINTMENT SLIP MODAL (POPUP & PRINTABLE)
-       =================================================================== -->
-  <div id="appointmentSlipModal" class="modal-backdrop">
-    <div class="appointment-slip-modal">
-      <button id="modalCloseBtn" class="modal-close-btn" aria-label="Close dialog">&times;</button>
-      
-      <div class="printable-slip-wrapper">
-        <div class="slip-header">
-          <div style="font-size: 0.8rem; font-weight: 700; color: var(--secondary-dark); text-transform: uppercase;">
-            श्री राम हॉस्पिटल • आँवला (बरेली)
-          </div>
-          <h2 class="slip-hospital-title">SHRI RAM HOSPITAL</h2>
-          <div class="slip-hospital-tagline">
-            Trusted Care &bull; Accurate Diagnosis &bull; Compassionate Treatment
-          </div>
-          <div style="font-size: 0.78rem; color: var(--text-muted); margin-top: 4px;">
-            Consultant: <strong>Dr. Hardeep Singh</strong> (General Physician &amp; Paediatrics)
-          </div>
-        </div>
-
-        <div class="slip-token-banner">
-          <div class="slip-token-label">OPD Consultation Token No.</div>
-          <div id="slipTokenId" class="slip-token-number">SRH-2611-4892</div>
-        </div>
-
-        <div class="slip-details-grid">
-          <div class="slip-detail-col">
-            <strong>Patient Name:</strong>
-            <span id="slipPatientName">Ramesh Kumar</span>
-          </div>
-          <div class="slip-detail-col">
-            <strong>Mobile:</strong>
-            <span id="slipPatientPhone">94120XXXXX</span>
-          </div>
-          <div class="slip-detail-col">
-            <strong>Age / Gender:</strong>
-            <span id="slipPatientAgeGender">28 Yrs / Male</span>
-          </div>
-          <div class="slip-detail-col">
-            <strong>Concern / Dept:</strong>
-            <span id="slipDepartment">Fever &amp; Viral Care</span>
-          </div>
-          <div class="slip-detail-col">
-            <strong>Appointment Date:</strong>
-            <span id="slipDate">Wednesday, 18 Nov 2026</span>
-          </div>
-          <div class="slip-detail-col">
-            <strong>Time Slot:</strong>
-            <span id="slipSlot">09:30 AM – 11:30 AM</span>
-          </div>
-        </div>
-
-        <div class="slip-instructions">
-          <strong>📌 Instructions for Patient:</strong><br>
-          1. Please report at Shri Ram Hospital reception 15 minutes before your time slot.<br>
-          2. Show this digital slip on your mobile or bring a printed copy.<br>
-          3. Address: Krishan Vihar Colony, Opp. 132 KV Power House, Aonla. Helpline: 078273 55717.
-        </div>
-
-        <div class="slip-modal-actions">
-          <button type="button" id="printSlipBtn" class="btn btn-outline">
-            🖨️ Print Slip / Save PDF
-          </button>
-          <a href="https://wa.me/917827355717" id="slipWhatsAppShare" target="_blank" class="btn btn-whatsapp">
-            💬 Send to Reception on WhatsApp
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
 
 <?php
 include 'footer.php';

@@ -816,7 +816,7 @@ include 'header.php';
                     <span>Mobile Number (मोबाइल नंबर)</span>
                     <span class="req">*</span>
                   </label>
-                  <input type="tel" id="patientPhone" class="form-control" placeholder="e.g. 78273XXXXX" pattern="[0-9]{10}" maxlength="10" required>
+                  <input type="tel" id="patientPhone" class="form-control" placeholder="e.g. 9876543210" pattern="(\+91|0)?[0-9]{10}" maxlength="14" required>
                 </div>
               </div>
 

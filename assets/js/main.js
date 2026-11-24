@@ -366,12 +366,18 @@ document.addEventListener('DOMContentLoaded', () => {
       document.getElementById('patientName')?.focus();
       return false;
     }
-    const phoneClean = data.phone.replace(/[^0-9]/g, '');
-    if (!phoneClean || phoneClean.length < 10) {
+    let phoneClean = (data.phone || '').replace(/[^0-9]/g, '');
+    if (phoneClean.startsWith('91') && phoneClean.length === 12) {
+      phoneClean = phoneClean.substring(2);
+    } else if (phoneClean.startsWith('0') && phoneClean.length === 11) {
+      phoneClean = phoneClean.substring(1);
+    }
+    if (!phoneClean || phoneClean.length !== 10) {
       alert('कृपया 10 अंकों का सही मोबाइल नंबर दर्ज करें (Please enter a valid 10-digit Mobile Number).');
       document.getElementById('patientPhone')?.focus();
       return false;
     }
+    data.phone = phoneClean; // normalize to 10 digits
     if (!data.age || parseInt(data.age) <= 0 || parseInt(data.age) > 120) {
       alert('कृपया मरीज की सही उम्र दर्ज करें (Please enter a valid Age).');
       document.getElementById('patientAge')?.focus();
@@ -465,14 +471,38 @@ document.addEventListener('DOMContentLoaded', () => {
         console.warn('Storage warning:', err);
       }
 
-      // Populate Slip Modal Fields
-      document.getElementById('slipTokenId').textContent = tokenID;
-      document.getElementById('slipPatientName').textContent = data.name;
-      document.getElementById('slipPatientPhone').textContent = data.phone;
-      document.getElementById('slipPatientAgeGender').textContent = `${data.age} Yrs / ${data.gender}`;
-      document.getElementById('slipDepartment').textContent = data.service;
-      document.getElementById('slipDate').textContent = formattedDate;
-      document.getElementById('slipSlot').textContent = data.slot;
+      // Populate Slip Modal Fields Safely
+      const slipTokenEl = document.getElementById('slipTokenId');
+      if (slipTokenEl) slipTokenEl.textContent = tokenID;
+      const slipNameEl = document.getElementById('slipPatientName');
+      if (slipNameEl) slipNameEl.textContent = data.name;
+      const slipPhoneEl = document.getElementById('slipPatientPhone');
+      if (slipPhoneEl) slipPhoneEl.textContent = data.phone;
+      const slipAgeGenderEl = document.getElementById('slipPatientAgeGender');
+      if (slipAgeGenderEl) slipAgeGenderEl.textContent = `${data.age} Yrs / ${data.gender}`;
+      const slipDeptEl = document.getElementById('slipDepartment');
+      if (slipDeptEl) slipDeptEl.textContent = data.service;
+      const slipDateEl = document.getElementById('slipDate');
+      if (slipDateEl) slipDateEl.textContent = formattedDate;
+      const slipSlotEl = document.getElementById('slipSlot');
+      if (slipSlotEl) slipSlotEl.textContent = data.slot;
+
+      // Update WhatsApp share button in modal with generated token details
+      const slipShareLink = document.getElementById('slipWhatsAppShare');
+      if (slipShareLink) {
+        const slipMsg = `🎫 *OPD CONSULTATION TOKEN SLIP*\n*Shri Ram Hospital – Aonla, Bareilly*\n---------------------------\n` +
+          `🔢 *Token No:* ${tokenID}\n` +
+          `👤 *Patient:* ${data.name}\n` +
+          `📞 *Phone:* ${data.phone}\n` +
+          `🎂 *Age / Gender:* ${data.age} Yrs / ${data.gender}\n` +
+          `🩺 *Department:* ${data.service}\n` +
+          `📅 *Date:* ${formattedDate}\n` +
+          `⏰ *Slot:* ${data.slot}\n` +
+          `---------------------------\n` +
+          `📍 Opp. 132 KV Power House, Aonla. Helpline: 078273 55717\n` +
+          `_Please confirm my queue position. Thank you!_`;
+        slipShareLink.href = `https://wa.me/${HOSPITAL_CONFIG.whatsappNumber}?text=${encodeURIComponent(slipMsg)}`;
+      }
 
       // Open Modal
       openModal();
